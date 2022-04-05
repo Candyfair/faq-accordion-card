@@ -18,37 +18,95 @@ body {
 }
 
 .max-width-wrapper {
-  min-width: 327px;
+  width: 327px;
   margin: 0 auto;
+}
+
+main {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 23px;
+  box-shadow: 0px 50px 50px -20px hsla(260deg, 74%, 27%, 0.5);
   padding-left: 24px;
   padding-right: 24px;
+  padding-bottom: 48px;
+  margin-top: 132px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (max-width: 375px) {
-  main {
-    background-color: hsl(0deg, 0%, 100%);
-    border-radius: 23px;
-    box-shadow: 0px 50px 50px -20px hsla(260deg, 74%, 27%, 0.5);
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 48px;
-    margin-top: 132px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .icon {
-    margin-top: -240px;
-    margin-bottom: 60px;
-    width: 237px;
-    height: 180px;
-  }
-  .icon-shadow {
-    margin-bottom: 28px;
-  }
+.icon {
+  margin-top: -240px;
+  margin-bottom: 60px;
+  width: 237px;
+  height: 180px;
 }
+.icon-shadow {
+  margin-bottom: 28px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 13px;
+  line-height: 16.12px;
+}
+
+p {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.accordion-group {
+  border-bottom: 1px solid hsl(240deg, 5%, 91%);
+  padding: 18px 0;
+  width: 100%;
+}
+.accordion-group-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.accordion-group-top-question {
+  font-weight: 400;
+}
+.accordion-group-top-arrow {
+  transform: rotate(0deg);
+}
+.accordion-group-answer {
+  display: none;
+  width: 85%;
+  color: hsl(240deg, 6%, 50%);
+  margin-top: 12px;
+}
+.accordion-group-answer .open {
+  display: block;
+}
+
+.focused {
+  font-weight: 700;
+}
+
+.open {
+  display: block;
+}
+
+.up {
+  transform: rotate(180deg);
+}
+
 footer {
   font-size: 11px;
   text-align: center;

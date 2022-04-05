@@ -1,10 +1,10 @@
 @import "vars";
 
-@mixin flexCenter($direction, $justify) {
+@mixin flexCenter($direction, $justify, $align) {
 	display: flex;
 	flex-direction: $direction;
   justify-content: $justify;
-	align-items: center;
+	align-items: $align;
 }
 
 html, body {
@@ -16,48 +16,105 @@ body {
   font-size: $font-size;
 }
 
+// PAGE CONTAINER
 .wrapper {
-  @include flexCenter(column, space-between);
+  @include flexCenter(column, space-between, center);
   min-height: 100%;
   background: $bg-violet;
   background: linear-gradient(180deg, $bg-violet 0%, $bg-blue 100%);
 }
 
+// CONTENT CONTAINER
 .max-width-wrapper {
-  min-width: 327px;
+  width: 327px;
   margin: 0 auto;
-  padding-left: 24px;
-  padding-right: 24px;
 }
 
+main {
+  background-color: $bg-white;
+  border-radius: 23px;
+  box-shadow: 0px 50px 50px -20px hsla(260,74%,27%,0.5);
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 48px;
+  margin-top: 132px;
+  @include flexCenter(column, center, center);
+}
 
-// MOBILE STYLES
-@media (max-width: 375px) {
+.icon {
+  margin-top: -240px;
+  margin-bottom: 60px;
+  width: 237px;
+  height: 180px;
   
-  main {
-    background-color: $bg-white;
-    border-radius: 23px;
-    box-shadow: 0px 50px 50px -20px hsla(260,74%,27%,0.5);
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 48px;
-    margin-top: 132px;
-    @include flexCenter(column, center);
+  &-shadow {
+    margin-bottom: 28px;
   }
+}
 
-  .icon {
-    margin-top: -240px;
-    margin-bottom: 60px;
-    width: 237px;
-    height: 180px;
-    
-    &-shadow {
-      margin-bottom: 28px;
+.title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 13px;
+  line-height: 16.12px;
+}
+
+p {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+// ACCORDION STYLES
+.accordion {
+  @include flexCenter(column, center, flex-start);
+  
+  &-group {
+    border-bottom: 1px solid $dividers;
+    padding: 18px 0;
+    width: 100%;
+
+    // Style for questions
+    &-top {
+      @include flexCenter(row, space-between, center);
+      
+      &-question {
+        font-weight: 400;
+      }
+
+      &-arrow {
+        transform: rotate(0deg);
+      }
+    }
+
+    // Style for answers
+    &-answer {
+      display: none;
+      width: 85%;
+      color: $color-paragraph;
+      margin-top: 12px;
+
+      & .open {
+        display: block;
+      }
     }
   }
+}
 
+// Accordion open
+.focused {
+  font-weight: 700;
+}
 
+.open {
+  display: block;
+}
 
+.up {
+  transform: rotate(180deg);
 }
 
 // FOOTER
