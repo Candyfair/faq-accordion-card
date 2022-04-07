@@ -1,12 +1,3 @@
-html, body {
-  height: 100%;
-}
-
-body {
-  font-family: "Kumbh Sans", sans-serif;
-  font-size: 12px;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -30,6 +21,10 @@ main {
   padding-right: 24px;
   padding-bottom: 48px;
   margin-top: 132px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon {
@@ -45,7 +40,6 @@ main {
 .title {
   font-size: 32px;
   font-weight: 700;
-  text-align: center;
 }
 
 .question {
@@ -108,4 +102,13 @@ footer {
 }
 footer a {
   color: hsl(0deg, 0%, 100%);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
 }/*# sourceMappingURL=styles.css.map */
