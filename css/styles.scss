@@ -38,7 +38,6 @@ main {
   padding-right: 24px;
   padding-bottom: 48px;
   margin-top: 132px;
-  @include flexCenter(column, center, center);
 }
 
 .icon {
@@ -55,67 +54,68 @@ main {
 .title {
   font-size: 32px;
   font-weight: 700;
+  text-align: center;
 }
 
-h2 {
+.question {
   font-size: 13px;
   line-height: 16.12px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.question:hover {
+  color: $link-hover;
+}
+
+.question:after {
+  content: url('/images/icon-arrow-down.svg');
+  float: right;
 }
 
 p {
   font-size: 12px;
   line-height: 18px;
-  font-weight: 400;
 }
 
 // ACCORDION STYLES
 .accordion {
-  @include flexCenter(column, center, flex-start);
+  padding-left: 0;
+  padding-right: 0;
   
-  &-group {
-    border-bottom: 1px solid $dividers;
+  &-question {
     padding: 18px 0;
     width: 100%;
+    border-bottom: 1px solid $dividers;
+  }
 
-    // Style for questions
-    &-top {
-      @include flexCenter(row, space-between, center);
-      
-      &-question {
-        font-weight: 400;
-      }
+}
 
-      &-arrow {
-        transform: rotate(0deg);
-      }
-    }
+.panel {
+  // display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 
-    // Style for answers
-    &-answer {
-      display: none;
-      width: 85%;
-      color: $color-paragraph;
-      margin-top: 12px;
-
-      & .open {
-        display: block;
-      }
+  &-text {
+    width: 85%;
+    color: $color-paragraph;
+    margin-top: 12px;
+  
+    & .open {
+      display: block;
     }
   }
 }
 
-// Accordion open
-.focused {
+.active {
   font-weight: 700;
+
+  &:after {
+    transform: rotate(180deg);
+  }
 }
 
-.open {
-  display: block;
-}
-
-.up {
-  transform: rotate(180deg);
-}
 
 // FOOTER
 footer {
