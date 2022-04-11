@@ -1,6 +1,6 @@
 # Frontend Mentor - FAQ accordion card solution
 
-This is a solution to the [FAQ accordion card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [FAQ accordion card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -26,11 +26,9 @@ Users should be able to:
 
 ### Screenshot
 
-Mobile layout:
-![Mobile view](images/faq-mobile.png)
-
-Desktop layout:
 ![Desktop view](images/faq-desktop.png)
+
+![Mobile view](images/faq-mobile.png)
 
 ### Links
 
@@ -39,7 +37,7 @@ Desktop layout:
 
 ## My process
 
-This solution was developed for mobiles first. I set up a SASS environment with variables and coded for mobile and tablet layouts first. I then added a media query and styled the website for desktops. 
+This solution was developed for mobiles first. I set up a SASS environment with variables and coded for mobile and tablet layouts first. I then added a media query and styled the website for desktops.
 
 ### Built with
 
