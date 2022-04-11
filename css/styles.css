@@ -155,6 +155,10 @@ p {
     max-width: 532px;
     padding: 65px 95px 83px 87px;
   }
+
+  .title {
+    text-align: left;
+  }
 }
 footer {
   font-size: 11px;
